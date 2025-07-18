@@ -16,8 +16,8 @@ interface ChatMessageComponentProps {
 export function ChatMessageComponent({ message }: ChatMessageComponentProps) {
   const isUser = message.role === "user";
   const colorScheme = isUser
-    ? "bg-blue-600 text-white"
-    : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100";
+    ? "bg-primary text-primary-foreground border-primary"
+    : "bg-muted text-muted-foreground border-border";
 
   return (
     <MessageContainer
@@ -27,7 +27,7 @@ export function ChatMessageComponent({ message }: ChatMessageComponentProps) {
       <div className="mb-2 flex items-center justify-between gap-4">
         <div
           className={`text-xs font-semibold opacity-90 ${
-            isUser ? "text-blue-100" : "text-slate-600 dark:text-slate-400"
+            isUser ? "text-primary-foreground" : "text-card-foreground"
           }`}
         >
           {isUser ? "User" : "Claude"}
@@ -35,7 +35,7 @@ export function ChatMessageComponent({ message }: ChatMessageComponentProps) {
         <TimestampComponent
           timestamp={message.timestamp}
           className={`text-xs opacity-70 ${
-            isUser ? "text-blue-200" : "text-slate-500 dark:text-slate-500"
+            isUser ? "text-primary-foreground/70" : "text-muted-foreground"
           }`}
         />
       </div>
@@ -94,10 +94,10 @@ export function SystemMessageComponent({
       badge={message.subtype}
       icon={<span className="bg-blue-400 dark:bg-blue-500">⚙</span>}
       colorScheme={{
-        header: "text-blue-800 dark:text-blue-300",
-        content: "text-blue-700 dark:text-blue-300",
+        header: "text-blue-900 dark:text-blue-100",
+        content: "text-blue-800 dark:text-blue-100",
         border: "border-blue-200 dark:border-blue-700",
-        bg: "bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800",
+        bg: "bg-blue-50/80 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800",
       }}
     />
   );
@@ -111,9 +111,9 @@ export function ToolMessageComponent({ message }: ToolMessageComponentProps) {
   return (
     <MessageContainer
       alignment="left"
-      colorScheme="bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-100"
+      colorScheme="bg-emerald-50 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-100 border-emerald-200 dark:border-emerald-800"
     >
-      <div className="text-xs font-semibold mb-2 opacity-90 text-emerald-700 dark:text-emerald-300 flex items-center gap-2">
+      <div className="text-xs font-semibold mb-2 opacity-90 text-emerald-800 dark:text-emerald-200 flex items-center gap-2">
         <div className="w-4 h-4 bg-emerald-500 dark:bg-emerald-600 rounded-full flex items-center justify-center text-white text-xs">
           🔧
         </div>
@@ -137,10 +137,10 @@ export function ToolResultMessageComponent({
       badge={message.summary}
       icon={<span className="bg-emerald-400 dark:bg-emerald-500">✓</span>}
       colorScheme={{
-        header: "text-emerald-800 dark:text-emerald-300",
-        content: "text-emerald-700 dark:text-emerald-300",
+        header: "text-emerald-900 dark:text-emerald-100",
+        content: "text-emerald-800 dark:text-emerald-100",
         border: "border-emerald-200 dark:border-emerald-700",
-        bg: "bg-emerald-50/80 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800",
+        bg: "bg-emerald-50/80 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800",
       }}
     />
   );
@@ -150,9 +150,9 @@ export function LoadingComponent() {
   return (
     <MessageContainer
       alignment="left"
-      colorScheme="bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100"
+      colorScheme="bg-muted text-muted-foreground border-border"
     >
-      <div className="text-xs font-semibold mb-2 opacity-90 text-slate-600 dark:text-slate-400">
+      <div className="text-xs font-semibold mb-2 opacity-90 text-card-foreground">
         Claude
       </div>
       <div className="flex items-center gap-2 text-sm">

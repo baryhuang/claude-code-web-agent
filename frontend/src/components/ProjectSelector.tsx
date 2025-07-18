@@ -85,8 +85,8 @@ export function ProjectSelector() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-slate-600 dark:text-slate-400">
+      <div className="flex items-center justify-center min-h-screen bg-background">
+        <div className="text-muted-foreground">
           Loading projects...
         </div>
       </div>
@@ -95,47 +95,47 @@ export function ProjectSelector() {
 
   if (error) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-red-600 dark:text-red-400">Error: {error}</div>
+      <div className="flex items-center justify-center min-h-screen bg-background">
+        <div className="text-destructive">Error: {error}</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div className="min-h-screen bg-background transition-colors duration-300">
       <div className="max-w-4xl mx-auto p-6">
-        <h1 className="text-slate-800 dark:text-slate-100 text-3xl font-bold tracking-tight mb-8">
+        <h1 className="text-foreground text-3xl font-bold tracking-tight mb-8">
           Select a Project
         </h1>
 
         <div className="space-y-3">
           {projects.length > 0 && (
             <>
-              <h2 className="text-slate-700 dark:text-slate-300 text-lg font-medium mb-4">
+              <h2 className="text-foreground text-lg font-medium mb-4">
                 Recent Projects
               </h2>
               {projects.map((project) => (
                 <button
                   key={project.path}
                   onClick={() => handleProjectSelect(project.path)}
-                  className="w-full flex items-center gap-3 p-4 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-lg transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-4 bg-card hover:bg-accent border border-border rounded-lg transition-colors text-left shadow-sm"
                 >
-                  <FolderIcon className="h-5 w-5 text-slate-500 dark:text-slate-400 flex-shrink-0" />
-                  <span className="text-slate-800 dark:text-slate-200 font-mono text-sm">
+                  <FolderIcon className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  <span className="text-card-foreground font-mono text-sm">
                     {project.path}
                   </span>
                 </button>
               ))}
-              <div className="my-6 border-t border-slate-200 dark:border-slate-700" />
+              <div className="my-6 border-t border-border" />
             </>
           )}
 
           <button
             onClick={handleNewDirectory}
-            className="w-full flex items-center gap-3 p-4 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg transition-colors text-left"
+            className="w-full flex items-center gap-3 p-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 rounded-lg transition-colors text-left shadow-sm"
           >
-            <PlusIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-            <span className="text-blue-800 dark:text-blue-200 font-medium">
+            <PlusIcon className="h-5 w-5 text-primary flex-shrink-0" />
+            <span className="text-primary font-medium">
               Select New Directory
             </span>
           </button>

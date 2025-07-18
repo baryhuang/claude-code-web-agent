@@ -67,7 +67,7 @@ export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
   return (
     <div
       ref={messagesContainerRef}
-      className="flex-1 overflow-y-auto bg-white/70 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 p-6 mb-6 rounded-2xl shadow-sm backdrop-blur-sm flex flex-col"
+      className="flex-1 overflow-y-auto bg-card border border-border p-6 mb-6 rounded-lg shadow-sm flex flex-col"
     >
       {messages.length === 0 ? (
         <EmptyState />
@@ -86,14 +86,14 @@ export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
 
 function EmptyState() {
   return (
-    <div className="flex-1 flex items-center justify-center text-center text-slate-500 dark:text-slate-400">
+    <div className="flex-1 flex items-center justify-center text-center text-muted-foreground">
       <div>
         <div className="text-6xl mb-6 opacity-60">
           <span role="img" aria-label="chat icon">
             💬
           </span>
         </div>
-        <p className="text-lg font-medium">Start a conversation with Claude</p>
+        <p className="text-lg font-medium text-foreground">Start a conversation with Claude</p>
         <p className="text-sm mt-2 opacity-80">
           Type your message below to begin
         </p>

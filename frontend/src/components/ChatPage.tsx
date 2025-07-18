@@ -379,7 +379,7 @@ export function ChatPage() {
                     className="text-foreground text-3xl font-bold tracking-tight hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md px-1 -mx-1"
                     aria-label="Back to project selection"
                   >
-                    Claude Code Web UI
+                    Claude Code Web Agent
                   </button>
                   {(isHistoryView || sessionId) && (
                     <>

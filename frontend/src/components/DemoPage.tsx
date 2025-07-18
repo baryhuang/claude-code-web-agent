@@ -233,7 +233,7 @@ export function DemoPage() {
         <div className="flex items-center justify-between mb-8 flex-shrink-0">
           <div>
             <h1 className="text-slate-800 dark:text-slate-100 text-3xl font-bold tracking-tight">
-              Claude Code Web UI
+              Claude Code Web Agent
               {isDemo && (
                 <span className="ml-3 text-lg font-normal text-slate-600 dark:text-slate-400">
                   (Demo)

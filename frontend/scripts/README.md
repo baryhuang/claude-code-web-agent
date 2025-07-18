@@ -1,6 +1,6 @@
 # Demo Recording Scripts
 
-This directory contains Playwright-based scripts for automatically recording demo videos of the Claude Code Web UI.
+This directory contains Playwright-based scripts for automatically recording demo videos of the Claude Code Web Agent.
 
 ## Setup
 

@@ -26,7 +26,7 @@ export function parseCliArgs(runtime: Runtime): ParsedArgs {
   program
     .name("claude-code-webui")
     .version(version, "-v, --version", "display version number")
-    .description("Claude Code Web UI Backend Server")
+    .description("Claude Code Web Agent Backend Server")
     .option(
       "-p, --port <port>",
       "Port to listen on",

@@ -1,4 +1,4 @@
-# 🌐 Claude Code Web UI
+# 🌐 Claude Code Web Agent
 
 [![npm Version](https://img.shields.io/npm/v/claude-code-webui)](https://www.npmjs.com/package/claude-code-webui)
 [![npm Downloads](https://img.shields.io/npm/dt/claude-code-webui)](https://www.npmjs.com/package/claude-code-webui)
@@ -14,7 +14,7 @@
 
 ## 📑 Table of Contents
 
-- [✨ Why Claude Code Web UI?](#why-claude-code-web-ui)
+- [✨ Why Claude Code Web Agent?](#why-claude-code-web-ui)
 - [🚀 Quick Start](#quick-start)
 - [⚙️ CLI Options](#️-cli-options)
 - [🔧 Development](#development)
@@ -26,11 +26,11 @@
 
 ---
 
-## ✨ Why Claude Code Web UI?
+## ✨ Why Claude Code Web Agent?
 
 **Transform the way you interact with Claude Code**
 
-Instead of being limited to command-line interactions, Claude Code Web UI brings you:
+Instead of being limited to command-line interactions, Claude Code Web Agent brings you:
 
 | CLI Experience                | Web UI Experience            |
 | ----------------------------- | ---------------------------- |
@@ -256,7 +256,7 @@ Ensure Claude CLI is installed and available in your PATH. Run `claude --version
 
 ## 🔗 Related Projects
 
-**Alternative Claude Code Web UIs:**
+**Alternative Claude Code Web Agents:**
 
 - **[siteboon/claudecodeui](https://github.com/siteboon/claudecodeui)**
   - A popular web-based Claude Code interface with mobile and remote management focus

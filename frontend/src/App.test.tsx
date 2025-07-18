@@ -43,7 +43,7 @@ describe("App Routing", () => {
       </EnterBehaviorProvider>,
     );
 
-    expect(screen.getByText("Claude Code Web UI")).toBeInTheDocument();
+    expect(screen.getByText("Claude Code Web Agent")).toBeInTheDocument();
     expect(screen.getByText("/test-path")).toBeInTheDocument();
   });
 

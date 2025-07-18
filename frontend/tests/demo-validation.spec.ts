@@ -12,7 +12,7 @@ test.describe("Demo Page Validation", () => {
     await page.goto("/demo", { waitUntil: "networkidle" });
 
     // Verify essential elements
-    await expect(page.locator("h1")).toContainText("Claude Code Web UI");
+    await expect(page.locator("h1")).toContainText("Claude Code Web Agent");
     await expect(page.locator('[data-demo-active="true"]')).toBeVisible();
 
     // Verify theme toggle works

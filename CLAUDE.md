@@ -1,4 +1,4 @@
-# Claude Code Web UI
+# Claude Code Web Agent
 
 A web-based interface for the `claude` command line tool that provides streaming responses in a chat interface.
 

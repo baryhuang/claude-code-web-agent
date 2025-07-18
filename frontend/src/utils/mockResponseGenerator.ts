@@ -162,7 +162,7 @@ export const DEMO_SCENARIOS = {
         type: "assistant" as const,
         delay: 1500,
         data: createAssistantMessage(
-          "Hello! I'm Claude, your AI assistant. I can help you with coding, file operations, and much more. I can see this is a Claude Code Web UI project - a React frontend with a Deno backend. What specific aspect would you like me to help you understand?",
+          "Hello! I'm Claude, your AI assistant. I can help you with coding, file operations, and much more. I can see this is a Claude Code Web Agent project - a React frontend with a Deno backend. What specific aspect would you like me to help you understand?",
           "demo-session-basic",
         ),
       },
@@ -205,7 +205,7 @@ export const DEMO_SCENARIOS = {
         type: "assistant" as const,
         delay: 2000,
         data: createAssistantMessage(
-          "I can see this is the main App.tsx file for the Claude Code Web UI project. It's a React application that uses React Router for navigation between a project selector page and the main chat interface. The app includes theme management with light/dark mode support, and provides a web-based interface for interacting with the Claude CLI tool. The routing system allows users to first select a working directory, then engage in conversations with Claude within that project context.",
+          "I can see this is the main App.tsx file for the Claude Code Web Agent project. It's a React application that uses React Router for navigation between a project selector page and the main chat interface. The app includes theme management with light/dark mode support, and provides a web-based interface for interacting with the Claude CLI tool. The routing system allows users to first select a working directory, then engage in conversations with Claude within that project context.",
           "demo-session-files",
         ),
       },

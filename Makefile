@@ -1,4 +1,4 @@
-# Claude Code Web UI - Development Tasks
+# Claude Code Web Agent - Development Tasks
 
 .PHONY: format format-check lint typecheck test build dev clean
 

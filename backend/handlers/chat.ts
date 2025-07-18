@@ -48,6 +48,7 @@ async function* executeClaudeCommand(
         ...(sessionId ? { resume: sessionId } : {}),
         ...(allowedTools ? { allowedTools } : {}),
         ...(workingDirectory ? { cwd: workingDirectory } : {}),
+        permissionMode: "bypassPermissions" as const,
       },
     })) {
       // Debug logging of raw SDK messages
